@@ -115,15 +115,13 @@ function initialize()
 
 	 	
 	 	
-//var geometry2 = new THREE.TorusKnotGeometry( 1, .1, 64, 8 );
-//var material2 = new THREE.MeshBasicMaterial( { color: 0xffaf00 } );
-//var torusKnot = new THREE.Mesh( geometry2, material2 );
-//torusKnot.position.y = 0.5;
+/*var geometry2 = new THREE.TorusKnotGeometry( .8, .01, 64, 8 );
+var material2 = new THREE.MeshBasicMaterial( { color: 0xffaf00 } );
+var torusKnot = new THREE.Mesh( geometry2, material2 );
+torusKnot.position.y = 0.5;*/
 	
 	var geometry = new THREE.BufferGeometry();
-// create a simple square shape. We duplicate the top left and bottom right
-// vertices because each vertex needs to appear once per triangle.
-var vertices = new Float32Array( [
+	var vertices = new Float32Array( [
 	-1.0, -1.0,  1.0,
 	 1.0, -1.0,  1.0,
 	 1.0,  1.0,  1.0,
@@ -132,18 +130,25 @@ var vertices = new Float32Array( [
 	-1.0,  1.0,  1.0,
 	-1.0, -1.0,  1.0,
 	
-	 1.0,  1.0,  1.0,
-	 1.0,  1.0,  1.0,
+	 1.0,  1.0,  -1.0,
+	 1.0,  -1.0,  -1.0,
 	 1.0,  1.0,  1.0,
 
      1.0,  1.0,  1.0,
 	 1.0,  1.0,  -1.0,
 	 1.0,  -1.0,  -1.0,
 
-	
-] );
+	1.0,  1.0, -1.0,
+	 -1.0,  1.0,  1.0,
+	 1.0,  -1.0,  1.0,
 
-// itemSize = 3 because there are 3 values (components) per vertex
+     -1.0,  1.0,  -1.0,
+	 1.0,  -1.0,  1.0,
+	 1.0,  1.0,  1.0,
+	 
+	
+	] );
+
 geometry.addAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
 var material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
 	var mesh = new THREE.Mesh( geometry, material );
