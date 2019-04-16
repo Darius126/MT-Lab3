@@ -1,3 +1,11 @@
+﻿
+Veikia su firefox naršykle
+Su google Chrome, Opera neveikia
+
+Išbandytas pavyzdinis kodas, sudaryta geometrija su Toruso mazgu, taip pat sudaryta nauja geometrija.
+
+
+
 # MT-Lab3
 LT
 Šio laboratorinio darbo tikslas - sukurti pirmąją papildytos realybės (AR) taikomąją programėlę/aplikaciją.
